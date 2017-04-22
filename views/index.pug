@@ -1,0 +1,168 @@
+doctype html
+html(lang='es')
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    meta(name='description', content='')
+    meta(name='author', content='')
+    // Favicons
+    link(rel='apple-touch-icon', sizes='57x57', href='../img/favicon/apple-icon-57x57.png')
+    link(rel='apple-touch-icon', sizes='60x60', href='../img/favicon/apple-icon-60x60.png')
+    link(rel='apple-touch-icon', sizes='72x72', href='../img/favicon/apple-icon-72x72.png')
+    link(rel='apple-touch-icon', sizes='76x76', href='../img/favicon/apple-icon-76x76.png')
+    link(rel='apple-touch-icon', sizes='114x114', href='../img/favicon/apple-icon-114x114.png')
+    link(rel='apple-touch-icon', sizes='120x120', href='../img/favicon/apple-icon-120x120.png')
+    link(rel='apple-touch-icon', sizes='144x144', href='../img/favicon/apple-icon-144x144.png')
+    link(rel='apple-touch-icon', sizes='152x152', href='../img/favicon/apple-icon-152x152.png')
+    link(rel='apple-touch-icon', sizes='180x180', href='../img/favicon/apple-icon-180x180.png')
+    link(rel='icon', type='image/png', sizes='192x192', href='../img/favicon/android-icon-192x192.png')
+    link(rel='icon', type='image/png', sizes='32x32', href='../img/favicon/favicon-32x32.png')
+    link(rel='icon', type='image/png', sizes='96x96', href='../img/favicon/favicon-96x96.png')
+    link(rel='icon', type='image/png', sizes='16x16', href='../img/favicon/favicon-16x16.png')
+    link(rel='manifest', href='../img/favicon/manifest.json')
+    meta(name='msapplication-TileColor', content='#ffffff')
+    meta(name='msapplication-TileImage', content='../img/favicon/ms-icon-144x144.png')
+    meta(name='theme-color', content='#ffffff')
+    title B&B-Expertos en consultorías. 
+    // Bootstrap Core CSS
+    script(src='https://use.fontawesome.com/4d62e711db.js')
+    link(href='../css/bootstrap.css', rel='stylesheet')
+    link(rel='stylesheet', href='../css/animate.css')
+    link(rel='stylesheet', href='../css/mstyle.css')
+    // Fonts
+    link(href='https://fonts.googleapis.com/css?family=Open+Sans', rel='stylesheet')
+    link(rel='stylesheet', href='../css/font-awesome.css')
+    // Custom CSS
+    style.
+      body {
+      padding-top: 0px;
+      font-family: 'Open Sans', sans-serif;
+      /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+      }
+    // HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries
+    // WARNING: Respond.js doesn't work if you view the page via file://
+    //if lt IE 9
+      script(src='https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js')
+      script(src='https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js')
+  body
+    // Navigation
+    nav.navbar.navbar-inverse.navbar-fixed-top(role='navigation')
+      .container
+        // Brand and toggle get grouped for better mobile display
+        .navbar-header
+          button.navbar-toggle(type='button', data-toggle='collapse', data-target='#bs-example-navbar-collapse-1')
+            span.sr-only Toggle navigation
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+          a.navbar-brand(href='#') B&B Consultores
+        // Collect the nav links, forms, and other content for toggling
+        #bs-example-navbar-collapse-1.collapse.navbar-collapse
+          ul.nav.navbar-nav
+            li
+              a(href='nosotros') Nosotros
+            li.dropdown
+              a.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='false')
+                | Servicios 
+                span.caret
+              ul.dropdown-menu
+                li
+                  a(href='contabilidad')
+                    i.fa.fa-book  
+                    |  Contabilidad
+                li
+                  a(href='auditoria')
+                    i.fa.fa-search  
+                    |  Auditorías
+                li
+                  a(href='./templates/finanzas.html')
+                    i.fa.fa-line-chart  
+                    |  Finanzas
+                li
+                  a(href='./templates/fiscal.html')
+                    i.fa.fa-university  
+                    |  Fiscal
+                li
+                  a(href='./templates/comercio-exterior.html')
+                    i.fa.fa-globe  
+                    |  Comercio exterior
+                li
+                  a(href='./templates/gestion.html')
+                    i.fa.fa-file  
+                    |  Gestoría
+            li
+              a(href='./templates/aviso.html') Aviso de privacidad
+            li
+              a(href='contacto') Contacto
+        // /.navbar-collapse
+      // /.container
+    #carousel-example-generic.carousel.slide(data-ride='carousel')
+      // Indicators
+      ol.carousel-indicators
+        li.active(data-target='#carousel-example-generic', data-slide-to='0')
+        li(data-target='#carousel-example-generic', data-slide-to='1')
+        li(data-target='#carousel-example-generic', data-slide-to='2')
+        li(data-target='#carousel-example-generic', data-slide-to='3')
+        li(data-target='#carousel-example-generic', data-slide-to='4')
+        li(data-target='#carousel-example-generic', data-slide-to='5')
+      // Wrapper for slides
+      .carousel-inner(role='listbox')
+        .item.active
+          img(src='../img/slide-contabilidad.jpg', alt='contadores profesionales')
+          .carousel-caption
+            | Contabilidad Integral
+        .item
+          img(src='../img/slide-finanzas.jpg', alt='expertos financieros')
+          .carousel-caption
+            | Expertos en finanzas
+        .item
+          img(src='../img/slide-auditoria.jpg', alt='auditoría interna')
+          .carousel-caption
+            | Auditorías
+        .item
+          img(src='../img/slide-fiscal.jpg', alt='Trámites de hacienda')
+          .carousel-caption
+            | Asesoría y ejecución fiscal
+        .item
+          img(src='../img/slide-comercio-exterior.jpg', alt='tramites de comercio exterior')
+          .carousel-caption
+            | Gestión en Comercio Exterior
+        .item
+          img(src='../img/slide-gestion.jpg', alt='Gestores profesionales')
+          .carousel-caption
+            | Gestoría ante autoridades gubernamentales
+      // Controls
+      a.left.carousel-control(href='#carousel-example-generic', role='button', data-slide='prev')
+        i.glyphicon.glyphicon-chevron-left(aria-hidden='true')
+        span.sr-only Previous
+      a.right.carousel-control(href='#carousel-example-generic', role='button', data-slide='next')
+        i.glyphicon.glyphicon-chevron-right(aria-hidden='true')
+        span.sr-only Next
+    // Page Content
+    .container
+      .row
+        .col-lg-3.col-md-3.col-sm-6.col-xs-12
+          img.img.responsive.wow.fadeInLeft(src='../img/b&b prototype 3.png', width='251', height='222', alt='Tramites ante hacienda')
+        .col-lg-9.col-md-9.col-sm-6.col-xs-12
+          .col-lg-12
+            h1.wow.slideInUp.bc Bienvenidos a B&B Consultores
+            .wow.fadeInUp(data-wow-delay='.5s')
+              p.lead
+                | Agradecemos mucho su visita, estamos seguros de tener una solución a la medida  para su negocio.
+              p.text-right
+                blockquote Potencializamos empresas...
+            p.text-right.wow.fadeInRight(data-wow-delay='1s')
+              a.btn.btn-info(href='nosotros')
+                i.fa.fa-arrow-right  
+                |  Continuar
+      // /.row
+    // /.container
+    // jQuery Version 1.11.1
+    script(src='../js/wow.min.js')
+    script.
+      new WOW().init();
+    script(src='../js/jquery.js')
+    // Bootstrap Core JavaScript
+    script(src='../js/bootstrap.min.js')
+
