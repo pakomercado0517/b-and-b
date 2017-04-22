@@ -61,7 +61,7 @@ html(lang='es')
       .container
         // Brand and toggle get grouped for better mobile display
         .navbar-header
-          button.navbar-toggle(type='button', data-toggle='collapse', data-target='#bs-example-navbar-collapse-1')
+          button(class='navbar-toggle collapsed' type='button', data-toggle='collapse', data-target='#bs-example-navbar-collapse-1', aria-expanded='false')
             span.sr-only Toggle navigation
             span.icon-bar
             span.icon-bar
@@ -152,5 +152,6 @@ html(lang='es')
     script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js")
     script(src='../js/jquery.js')
     // Bootstrap Core JavaScript
+    script(src='../js/bootstrap.min.js')
     script(src='../js/jqBootstrapValidation.js')
     script(src='../js/contact_me.js')
