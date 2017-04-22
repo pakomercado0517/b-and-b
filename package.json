@@ -2,9 +2,9 @@
   "name": "b-and-b",
   "version": "1.0.0",
   "private": false,
-  "main": "./app.js",
+  "main": "app.js",
   "scripts": {
-    "start": "node ./bin/www"
+    "start": "node app.js"
   },
   "dependencies": {
     "body-parser": "~1.17.1",
@@ -13,7 +13,8 @@
     "express": "~4.15.2",
     "morgan": "~1.8.1",
     "pug": "~2.0.0-beta11",
-    "serve-favicon": "~2.4.2"
+    "serve-favicon": "~2.4.2",
+    "socket.io": "^1.7.3"
   },
   "keywords": [
     "example",
