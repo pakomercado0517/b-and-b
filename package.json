@@ -1,7 +1,8 @@
 {
   "name": "b-and-b",
-  "version": "0.0.0",
-  "private": true,
+  "version": "1.0.0",
+  "private": false,
+  "main": "app.js",
   "scripts": {
     "start": "node ./bin/www"
   },
@@ -13,5 +14,24 @@
     "morgan": "~1.8.1",
     "pug": "~2.0.0-beta11",
     "serve-favicon": "~2.4.2"
-  }
+  },
+  "keywords": [
+    "example",
+    "heroku"
+  ],
+  "engines": {
+    "node": "7.9.0"
+  },
+  "description": "Aplication web for B$B Consultores company",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pakomercado0517/b-and-b.git"
+  },
+  "author": "Pako Mercado Escalante",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pakomercado0517/b-and-b/issues"
+  },
+  "homepage": "https://github.com/pakomercado0517/b-and-b#readme"
 }
