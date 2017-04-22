@@ -2,9 +2,9 @@
   "name": "b-and-b",
   "version": "1.0.0",
   "private": false,
-  "main": "./app.js",
+  "main": "./bin/www",
   "scripts": {
-    "start": "node app.js"
+    "start": "node ./bin/www"
   },
   "dependencies": {
     "body-parser": "~1.17.1",
