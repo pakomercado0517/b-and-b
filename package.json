@@ -2,7 +2,7 @@
   "name": "b-and-b",
   "version": "1.0.0",
   "private": false,
-  "main": "app.js",
+  "main": "./app.js",
   "scripts": {
     "start": "node app.js"
   },
