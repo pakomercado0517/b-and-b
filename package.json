@@ -2,7 +2,7 @@
   "name": "b-and-b",
   "version": "1.0.0",
   "private": false,
-  "main": "./bin/www",
+  "main": "./app.js",
   "scripts": {
     "start": "node ./bin/www"
   },
