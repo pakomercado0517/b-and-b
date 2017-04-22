@@ -13,7 +13,7 @@ router.get('/contacto', function(req, res) {
 	res.render('contacto')
 })
 router.post('/contacto', function(req,res) {
-	res.send('../public/php/contact_me.php')
+	res.send('contact_me')
 })
 router.get('/contabilidad', function(req, res) {
 	res.render('contabilidad')
