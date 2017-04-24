@@ -19,8 +19,8 @@ var app = express();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
-app.engine('php', phpExpress.router)
-app.set('view engine', 'pug', 'php');
+app.engine('php', phpExpress.engine)
+app.set('view engine', 'pug', 'phpExpress');
 
 // uncomment after placing your favicon in /public
 // app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
