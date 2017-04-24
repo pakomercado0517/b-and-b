@@ -19,8 +19,6 @@ $EmailTo = "fgme.facturacion@b-and-bconsultores.com.mx";
 $Subject = "Nuevo mensaje recibido de Consultores";
  
 // prepare email body text
-$Body .= "MIME-Version: 1.0\r\n";
-$Body .= "Content -type: text-html; charset:iso-8859-1\r\n";
 $Body .= "Name: ";
 $Body .= $name;
 $Body .= "\n";
