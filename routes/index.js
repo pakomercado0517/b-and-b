@@ -13,7 +13,7 @@ router.get('/contacto', function(req, res) {
 	res.render('contacto')
 })
 router.post('/contacto', function(req,res) {
-	let form= submitSuccess
+	let form= submitSuccess()
 
 	let db= firebase.database()
 
