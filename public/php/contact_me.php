@@ -1,5 +1,12 @@
 <?php
 
+const DEFAULT_URL = 'https://b-and-b-709c2.firebaseio.com';
+const DEFAULT_TOKEN = 'a67bfd48a89ddb2acef483b54d698ee7f0be9323';
+const DEFAULT_PATH = '/firebase/b-and-b-709c2';
+
+$firebase= new \Firebase\FirebaseLib(DEFAULT_URL, DEFAULT_TOKEN)
+$firebase->set(DEFAULT_PATH, name,email,phone,message);
+
 if( empty ($_POST['name'])
     empty($_POST['email'])
     empty($_POST['phone'])
