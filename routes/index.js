@@ -12,20 +12,25 @@ router.get('/nosotros', function(req, res) {
 router.get('/contacto', function(req, res) {
 	res.render('contacto')
 })
-router.post('/contacto', function(req,res) {
-	let form= submitSuccess()
+router.post('/js/mail.js', function(req,res) {
 
-	let db= firebase.database()
+	res.send('mail.js')
 
-	let formInputs= db.ref('form-submit').push
-	 formInputs.set({
-		name: name,
-		phone: phone,
-		email: email,
-		message: message
-	})
 
-	res.send(req.body.form)
+
+	// let form= submitSuccess()
+
+	// let db= firebase.database()
+
+	// let formInputs= db.ref('form-submit').push
+	//  formInputs.set({
+	// 	name: name,
+	// 	phone: phone,
+	// 	email: email,
+	// 	message: message
+	// })
+
+	// res.send(req.body.form)
 })
 router.get('/contabilidad', function(req, res) {
 	res.render('contabilidad')
