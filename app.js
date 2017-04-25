@@ -31,12 +31,12 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'config')));
 
 
-var url2= 'https://b-and-b-709c2.firebaseio.com'
+var dbURL= 'https://b-and-b-709c2.firebaseio.com'
 
 firebase.initializeApp({
 	 
   serviceAccount: './b-and-b-a67bfd48a89d.json',
-  databaseURL: url2
+  databaseURL: dbURL
 })
 
 app.use('/', index);

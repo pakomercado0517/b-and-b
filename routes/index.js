@@ -13,16 +13,16 @@ router.get('/contacto', function(req, res) {
 	res.render('contacto')
 })
 router.post('/contacto', function(req,res) {
-	let form= req.body.form
+	let form= submitSuccess
 
 	let db= firebase.database()
 
 	let formInputs= db.ref('form-submit').push
 	 formInputs.set({
-		name:'',
-		phone:'',
-		email: '',
-		message: ''
+		name: name,
+		phone: phone,
+		email: email,
+		message: message
 	})
 
 	res.send(req.body.form)
