@@ -12,9 +12,9 @@ router.get('/nosotros', function(req, res) {
 router.get('/contacto', function(req, res) {
 	res.render('contacto')
 })
-router.post('/js/mail.js', function(req,res) {
+router.post('/php/contact_me.php', function(req,res) {
 
-	res.send('mail.js')
+	res.send('contact_me.php')
 
 
 
