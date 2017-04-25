@@ -12,9 +12,21 @@ router.get('/nosotros', function(req, res) {
 router.get('/contacto', function(req, res) {
 	res.render('contacto')
 })
-// router.post('/contacto', function(req,res) {
-	// res.send('contact_me.js')
-// })
+router.post('/contacto', function(req,res) {
+	let form= req.body.form
+
+	let db= firebase.database()
+
+	let formInputs= db.ref('form-submit').push
+	 formInputs.set({
+		name:'',
+		phone:'',
+		email: '',
+		message: ''
+	})
+
+	res.send(req.body.form)
+})
 router.get('/contabilidad', function(req, res) {
 	res.render('contabilidad')
 })
