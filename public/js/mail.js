@@ -1,35 +1,32 @@
-var fireMail= require('fire-mail')
-var nodemailer= require('nodemailer')
 
-var name= name
-var email= email
-var phone= phone
-var message= message 
+const nodemailer= require('nodemailer')
 
-
-var smtpTransport= nodemailer.createTransport('SMTP', {
-	service: 'Zoho',
-	auth: {
-		user: 'admin@b-and-bconsultores.com.mx'
-		pass: 'Chisqueado251785'
-	}
-})
-
-var emailContent= '<b>From: '+name+'<br>Phone: '+phone+'<br>Message: '+message+'<br>Email: '+email+'</b>'
-
-var mailOptions= {
-	from: name + '<admin@b-and-bconsultores.com.mx>'
-	to: 'fgme.facturacion@b-and-bconsultores.com.mx'
-	subject: 'Nuevo mensaje de cliente prospecto'
+exports.sendMail= function(req,res) {
+	let transporter= nodemailer.createTransport({
+		service: 'Gmail',
+		auth: {
+			user: 'sissyyayle0517@gmail.com',
+			pass:'chisqueado0517'
+		}
+	})
+let mailOptions= {
+	from: name, 
+	to: 'fgme.facturacion@b-and-bconsultores.com.mx',
+	subject: phone,
 	text: message
-	html: emailContent
 }
+// Envío de email
 
-smtpTransport.sendMail(mailOptions, function(error, response) {
+transporter.sendMail(mailOptions, function(error, info) {
 	if(error){
 		console.log(error)
+		res.send(500, err.message)
 	}
-	else{
-		console.log('Message sent: '+response.message)
+	else {
+		console.log('Correo Enviado con exito')
+		res.status(200).jsonp(req.body)
 	}
 })
+}
+
+
