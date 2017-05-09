@@ -1,10 +1,11 @@
-let nodeMailer= require('nodemailer')
 
-exports.sendEmail= function(req,res) {
+const nodemailer= require('nodemailer')
+
+exports.sendMail= function(req,res) {
 	let transporter= nodemailer.createTransport({
-		service: 'Gmail'
+		service: 'gmail'
 		auth: {
-			user: 'sissyyayle0517@gmail.com'
+			user: 'sissyyayle0517@gmail.com',
 			pass:'chisqueado0517'
 		}
 	})

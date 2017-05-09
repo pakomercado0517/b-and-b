@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-var mail= require('mail.js')
+var mail= require('./mail.js')
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -15,7 +15,7 @@ router.get('/contacto', function(req, res) {
 })
 router.post('/mail', function(req,res) {
 
-	res.send('mail')
+	res.send('./mail')
 
 
 
