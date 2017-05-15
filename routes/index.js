@@ -15,7 +15,12 @@ router.get('/contacto', function(req, res) {
 })
 router.post('/js/mail.js', function(req,res) {
 
-	res.send(mail.sendMail)
+	mail.sendMail({
+		from: {name, email}, 
+		to: 'fgme.facturacion@b-and-bconsultores.com.mx',
+		subject: phone,
+		text: message
+	})
 
 
 
