@@ -17,7 +17,7 @@ router.post('/js/mail.js', function(req,res) {
 
 	mail.sendMail({
 		from: {name, email}, 
-		to: 'fgme.facturacion@b-and-bconsultores.com.mx',
+		to: 'fgme.facturacion@gmail.com',
 		subject: phone,
 		text: message
 	})
