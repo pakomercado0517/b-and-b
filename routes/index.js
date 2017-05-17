@@ -13,14 +13,14 @@ router.get('/nosotros', function(req, res) {
 router.get('/contacto', function(req, res) {
 	res.render('contacto')
 })
-router.post('./public/js/mail.js', function(req,res) {
+router.post('/public/php/contact_me.php', function(req,res) {
 
-	mail.sendMail({
-		from: {name, email}, 
-		to: 'fgme.facturacion@gmail.com',
-		subject: phone,
-		text: message
-	})
+	// mail.sendMail({
+	// 	from: {name, email}, 
+	// 	to: 'fgme.facturacion@gmail.com',
+	// 	subject: phone,
+	// 	text: message
+	// })
 
 
 
@@ -36,7 +36,7 @@ router.post('./public/js/mail.js', function(req,res) {
 	// 	message: message
 	// })
 
-	// res.send(req.body.form)
+	res.send(req.body.form)
 })
 router.get('/contabilidad', function(req, res) {
 	res.render('contabilidad')

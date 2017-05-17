@@ -22,7 +22,7 @@ $email = $_POST["email"];
 $message = $_POST["message"];
 $phone = $_POST["phone"];
  
-$EmailTo = "fgme.facturacion@b-and-bconsultores.com.mx";
+$EmailTo = "fgme.facturacion@gmail.com";
 $Subject = "Nuevo mensaje recibido de Consultores";
  
 // prepare email body text
@@ -43,7 +43,7 @@ $Body .= $phone;
 $Body .= "\n";
  
 // send email
-$success = mail($EmailTo, $Subject, $Body, "From:".$email);
+$success = mail($EmailTo, $Subject, $Body, "From:"$email);
  
 // redirect to success page
 if ($success){
