@@ -29,6 +29,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'config')));
+app.use(express.static(path.join(__dirname, 'routes')))
 
 
 var dbURL= 'https://b-and-b-709c2.firebaseio.com'

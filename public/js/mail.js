@@ -1,10 +1,10 @@
 const nodemailer= require('nodemailer')
 const web= require('../../tokengmail.json')
 
-let name= document.getElementById('name')
-let mail= document.getElementById('email')
-let phone= document.getElementById('phone')
-let message= document.getElementById('message')
+// let name= document.getElementById('name')
+// let mail= document.getElementById('email')
+// let phone= document.getElementById('phone')
+// let message= document.getElementById('message')
 
 let transporter= nodemailer.createTransport({
 	service: 'Gmail',
@@ -16,23 +16,23 @@ let transporter= nodemailer.createTransport({
 })
 
 let mailOptions= {
-	from: {name, email}, 
-	to: 'fgme.facturacion@b-and-bconsultores.com.mx',
-	subject: phone,
-	text: message
+	from: '', 
+	to: 'fgme.facturacion@gmail.com',
+	subject: '',
+	text: ''
 }
 // Envío de email
 
-transporter.sendMail(mailOptions, function(error, info) {
-	if(error){
-		console.log(error)
-		res.send(500, err.message)
-	}
-	else {
-		console.log('Correo Enviado con exito')
-		res.status(200).jsonp(req.body)
-	}
-})
+// transporter.sendMail(mailOptions, function(error, info) {
+// 	if(error){
+// 		console.log(error)
+// 		res.send(500, err.message)
+// 	}
+// 	else {
+// 		console.log('Correo Enviado con exito')
+// 		res.status(200).jsonp(req.body)
+// 	}
+// })
 
 
-module.exports= mail
+module.exports= transporter

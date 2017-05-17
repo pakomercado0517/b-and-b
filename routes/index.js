@@ -13,7 +13,7 @@ router.get('/nosotros', function(req, res) {
 router.get('/contacto', function(req, res) {
 	res.render('contacto')
 })
-router.post('/js/mail.js', function(req,res) {
+router.post('./public/js/mail.js', function(req,res) {
 
 	mail.sendMail({
 		from: {name, email}, 
