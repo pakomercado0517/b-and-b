@@ -1,0 +1,75 @@
+extends layout
+
+block services
+  .row
+    .col-sm-12.col-md-12.col-lg-12
+      p.h3.text-white.text-center
+        strong Nuestros servicios
+  .row
+    .col-sm-12.col-md-8.col-lg-3
+      .card.text-center.card-service
+        img.card-image-top.wow.bounceInDown(src='img/resultado-contable-y-fiscal.jpg', alt='Card image cap')#card_image
+        .card-header
+          h4.card-title.wow.bounceIn Servicios Contables      
+        .card-block
+          p.card-text 
+            ul.list-services.wow.bounceInUp
+              li Servicios Generales de Contabilidad
+              li Regulación contable
+              li Costos
+              li Facturación Electrónica
+              li Maquila de Nómina
+              li Nómina
+              li Declaraciones de impuestos: Personas Físicas y Morales
+    .col-sm-12.col-md-8.col-lg-3
+      .card.text-center.card-service
+        img.card-image-top.wow.bounceInDown(src='img/negocios.jpg', alt='Card image cap')#card_image
+        .card-header
+          h4.card-title.wow.bounceIn Administrativos      
+        .card-block
+          p.card-text 
+            ul.list-services.wow.bounceInUp
+              li Administracion de cajas y Fondos de ahorro Empresariales.
+              li Administración de Empresas.
+              li Descripción de puestos.
+              li Estructura y Reestructura Organizacional.
+              li Evaluación de Proyectos de Inversión.
+              li Presupuestos Maestros.
+              li Proyecciones Financieras.
+              li Sistemas Administrativos.
+    .col-sm-12.col-md-8.col-lg-3
+      .card.text-center.card-service
+        img.card-image-top.wow.bounceInDown(src='img/asesoria contable.jpg', alt='Card image cap')#card_image
+        .card-header
+          h4.card-title.wow.bounceIn Diseño Gráfico      
+        .card-block
+          p.card-text 
+            ul.list-services.wow.bounceInUp
+              li Imágen Corporativa.
+              li Diseño Web.
+              li Diseño Editorial.
+              li Diseño en formas Personalizadas.
+              li Fotografía.
+              li Impresión en gran formato.
+              li Impresión en Offset.
+              li Impresión Digital.
+              li Impresión en serigrafía.
+              li Ilustración Digital.
+    .col-sm-12.col-md-8.col-lg-3
+      .card.text-center.card-service
+        img.card-image-top.wow.bounceInDown(src='img/atencionCliente.jpg', alt='Card image cap')#card_image
+        .card-header
+          h4.card-title.wow.bounceIn Trámites      
+        .card-block
+          p.card-text 
+            ul.list-services.wow.bounceInUp
+              li 
+                strong Determianción de pagos antes las siguientes entidades:
+              li IMSS
+              li SAT
+              li Bancario
+              li Apertura de créditos
+  .row.justify-content-center
+    .col-sm-12.col-md-8.col-lg-4
+      button(type=button)#button_page.btn.btn-block.btn-outline-primary.wow.fadeInRight
+        a(href='/contact') Contáctanos

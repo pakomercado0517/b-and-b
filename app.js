@@ -4,7 +4,6 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
-var firebase= require('firebase')
 
 
 
@@ -14,7 +13,6 @@ var index = require('./routes/index');
 // var contabilidad= require('./routes/contabilidad')
 // var auditoria= require('./routes/auditoria')
 var users = require('./routes/users');
-
 var app = express();
 
 // view engine setup
@@ -31,14 +29,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'config')));
 app.use(express.static(path.join(__dirname, 'routes')))
 
-
-var dbURL= 'https://b-and-b-709c2.firebaseio.com'
-
-firebase.initializeApp({
-	 
-  serviceAccount: './b-and-b-a67bfd48a89d.json',
-  databaseURL: dbURL
-})
 
 app.use('/', index);
 

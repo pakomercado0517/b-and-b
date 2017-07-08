@@ -1,46 +1,67 @@
-.bc{
-	color: #245067;
-}
-.wc{
-	color: #fff;
-}
-.servic{
-	width: auto;
-	height: auto;
-	background-color: #fff;
+@import url('https://fonts.googleapis.com/css?family=Architects+Daughter|Bungee+Inline|Yellowtail|Shrikhand|Poppins|Roboto+Condensed');
 
+.container-fluid {
+  background-image: url('/../img/tec.tiff'), radial-gradient(rgba(0,0,0,0.8), black);
+  background-blend-mode:color-dodge;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+  font-family: 'Roboto Condensed', sans-serif !important;
 }
-.servic-inter{
-	width: 50%;
-	height: auto;
-	background-color: #245067;
+.row {
+  margin-top: 30px;
 }
-.blue-bg{
-	background-color: #245067;
-	color: #fff;
-	padding: 25px 0px 25px 0px;
+#logo_image {
+  background: rgba(0,0,0,0.4);
+  border-radius: 10% 10% 10% 10%;
+  max-width: 150px !important;
+  max-height:150px !important;
 }
-.conta-header{
-	width: 100%;
-	height: 350px;
-	 background:url(../img/head-conta.jpg) no-repeat fixed center top;
-/*background-size*/
--webkit-background-size:/*@@prefixmycss->No equivalent*/;
-   -moz-background-size:cover;
-     -o-background-size:/*@@prefixmycss->No equivalent*/;
-        background-size:cover;
-        color: #fff;
-        padding-top: 100px;
+#nav-page {
+  background: rgba(1,1,1,0.8);
 }
-.auditoria-header{
-	width: 100%;
-	height: 350px;
-	 background:url(../img/head-audit.jpg) no-repeat fixed center top;
-/*background-size*/
--webkit-background-size:/*@@prefixmycss->No equivalent*/;
-   -moz-background-size:cover;
-     -o-background-size:/*@@prefixmycss->No equivalent*/;
-        background-size:cover;
-        color: #fff;
-        padding-top: 100px;
+#nav-page a {
+  color: #90AEE1;
+}
+.first-title {
+  color:white;
+  padding-bottom: 30px;
+  text-align: center;
+}
+.icon-image {
+  max-width: 100%;
+  max-height: auto;
+}
+.list-bnb {
+  color: white;
+}
+#button_page a {
+  color:white;
+}
+#button_page a:hover {
+  text-decoration:none;
+  color:white;
+}
+#card_image {
+  max-height: 180px !important;
+}
+.list-services li {
+  list-style: none;
+  padding-right: 50px;
+}
+.card-header {
+  background: rgba(0,0,0,0.6) !important;
+  color: #C8C0C0;
+}
+.card-service {
+  background: transparent !important;
+  color:#AAA1A1;
+}
+.form-contact {
+  color: #AAA1A1; 
+}
+#name, #mail, #number, .message {
+  text-decoration-color: white;
+  background: #6D6A6A !important;
+  color: #FDE5E5 !important;  
 }

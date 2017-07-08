@@ -17,16 +17,16 @@ $(function() {
             if (firstName.indexOf(' ') >= 0) {
                 firstName = name.split(' ').slice(0, -1).join(' ');
             }
-            $.ajax({
-                url: "./public/php/contact_me.php",
-                type: "POST",
-                data: {
-                    name: name,
-                    phone: phone,
-                    email: email,
-                    message: message
-                },
-                cache: false,
+            // $.ajax({
+            //     url: "../../routes/mail.js",
+            //     type: "POST",
+            //     data: {
+            //         name: name,
+            //         phone: phone,
+            //         email: email,
+            //         message: message
+            //     },
+            //     cache: false,
                 success: function() {
                     // Success message
                     $('#success').html("<div class='alert alert-success'>");
