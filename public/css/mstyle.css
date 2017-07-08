@@ -1,8 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Architects+Daughter|Bungee+Inline|Yellowtail|Shrikhand|Poppins|Roboto+Condensed');
 
-.container-fluid {
+body {
   margin:0 !important;
   padding:0 !important;
+}
+.container-fluid {
   background-image: url('/../img/tec.tiff'), radial-gradient(rgba(0,0,0,0.8), black);
   background-blend-mode:color-dodge;
   background-repeat: no-repeat;
