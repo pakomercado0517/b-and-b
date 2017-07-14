@@ -4,6 +4,7 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var nodemailer= require('nodemailer')
 
 
 
@@ -23,7 +24,7 @@ app.set('view engine', 'pug');
 // app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 app.use(logger('dev'));
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'config')));
@@ -31,6 +32,33 @@ app.use(express.static(path.join(__dirname, 'routes')))
 
 
 app.use('/', index);
+app.post('/mailing', function(req, res) {
+	let transporter= nodemailer.createTransport({
+	    host: 'smtp.zoho.com',
+	    port: 465,
+	    secure: true,
+	    auth: {
+	    	user:'admin@b-and-bconsultores.com.mx',
+	    	pass: 'Chisqueado251785'
+	    } 
+	})
+
+	let mailOptions= {
+	  from: 'admin@b-and-bconsultores.com.mx',
+	  to: 'meza.alf@b-and-bconsultores.com.mx, admin@b-and-bconsultores.com.mx',
+	  subject: 'Mensaje de www.b-and-bconsultores.com.mx',
+	  text: req.body.message,
+	  html: `<p>De: ${req.body.name}</p><br><p>Correo: ${req.body.mail}</p><br><p>Teléfono: ${req.body.number}</p><br><p>Mensaje: ${req.body.message}</p>`
+	}
+
+	transporter.sendMail(mailOptions, (error, info) => {
+	  if(error) {
+	    return console.log(error)
+	  }
+	  console.log('Mensaje enviado con éxito' + info)
+	})
+	res.redirect('/contact')
+})
 
 // app.use('/nosotros', nosotros);
 // app.use('/contacto', contacto);
